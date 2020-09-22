@@ -8,8 +8,11 @@
 
 import UIKit
 
-class MovieCategoryTableViewCell: UITableViewCell {
+class MovieCategoryTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
 
+    @IBOutlet weak var cvCategory: UICollectionView!
+    var category: Category!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,8 +25,22 @@ class MovieCategoryTableViewCell: UITableViewCell {
     }
 
     func loadCell(with category: Category) {
-        
-        print(category)
+        cvCategory.delegate = self
+        cvCategory.dataSource = self
+        self.category = category
     }
     
+    // MARK: - UICollectionViewDelegate, UICollectionViewDataSource
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.category.movies?.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCell", for: indexPath) as! CollectionViewCell
+        cell.loadCell(with: category.movies![indexPath.row])
+        return cell
+    }
+    
+
 }

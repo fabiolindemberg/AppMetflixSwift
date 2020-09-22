@@ -3,27 +3,61 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47A6EB9F3A7FFC3069552680 /* Pods_AppMetflix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5321187275C3EBB7335F86D0 /* Pods_AppMetflix.framework */; };
+		49327CD825197E3000BDA3DD /* MovieCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49327CD725197E3000BDA3DD /* MovieCategoryTableViewCell.swift */; };
+		494F6EE025198728006DEB17 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F6EDF25198728006DEB17 /* CollectionViewCell.swift */; };
 		49BB198725190DB300EA7610 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB198625190DB300EA7610 /* AppDelegate.swift */; };
 		49BB198925190DB300EA7610 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB198825190DB300EA7610 /* SceneDelegate.swift */; };
-		49BB198B25190DB300EA7610 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB198A25190DB300EA7610 /* ViewController.swift */; };
 		49BB198E25190DB300EA7610 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BB198C25190DB300EA7610 /* Main.storyboard */; };
 		49BB199025190DB700EA7610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49BB198F25190DB700EA7610 /* Assets.xcassets */; };
 		49BB199325190DB700EA7610 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BB199125190DB700EA7610 /* LaunchScreen.storyboard */; };
+		49BB199C2519130400EA7610 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB199B2519130400EA7610 /* HomeTableViewController.swift */; };
+		49BB19A42519151A00EA7610 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB19A32519151A00EA7610 /* Category.swift */; };
+		49BB19A62519166900EA7610 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB19A52519166900EA7610 /* Movie.swift */; };
+		49BB19AA25191B1D00EA7610 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB19A725191B1D00EA7610 /* HomePresenter.swift */; };
+		49BB19AB25191B1D00EA7610 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB19A825191B1D00EA7610 /* HomeRouter.swift */; };
+		49BB19AC25191B1D00EA7610 /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB19A925191B1D00EA7610 /* HomeManager.swift */; };
+		49BB19B225191C1500EA7610 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB19AE25191C1500EA7610 /* BasePresenter.swift */; };
+		49BB19B325191C1500EA7610 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB19AF25191C1500EA7610 /* BaseRouter.swift */; };
+		49BB19B425191C1500EA7610 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB19B025191C1500EA7610 /* BaseViewController.swift */; };
+		49BB19B525191C1500EA7610 /* BaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB19B125191C1500EA7610 /* BaseManager.swift */; };
+		49BB19B82519220C00EA7610 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB19B72519220C00EA7610 /* Extensions.swift */; };
+		49BB19BA2519225900EA7610 /* Enumns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB19B92519225900EA7610 /* Enumns.swift */; };
+		49BB19BC2519431200EA7610 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB19BB2519431200EA7610 /* Constants.swift */; };
+		49BB19BE251944EE00EA7610 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB19BD251944EE00EA7610 /* ApiResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		49327CD725197E3000BDA3DD /* MovieCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCategoryTableViewCell.swift; sourceTree = "<group>"; };
+		494F6EDF25198728006DEB17 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		49BB198325190DB300EA7610 /* AppMetflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppMetflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49BB198625190DB300EA7610 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49BB198825190DB300EA7610 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		49BB198A25190DB300EA7610 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		49BB198D25190DB300EA7610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49BB198F25190DB700EA7610 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49BB199225190DB700EA7610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49BB199425190DB700EA7610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49BB199B2519130400EA7610 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		49BB19A32519151A00EA7610 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		49BB19A52519166900EA7610 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		49BB19A725191B1D00EA7610 /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		49BB19A825191B1D00EA7610 /* HomeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		49BB19A925191B1D00EA7610 /* HomeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeManager.swift; sourceTree = "<group>"; };
+		49BB19AE25191C1500EA7610 /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		49BB19AF25191C1500EA7610 /* BaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		49BB19B025191C1500EA7610 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		49BB19B125191C1500EA7610 /* BaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseManager.swift; sourceTree = "<group>"; };
+		49BB19B72519220C00EA7610 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		49BB19B92519225900EA7610 /* Enumns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumns.swift; sourceTree = "<group>"; };
+		49BB19BB2519431200EA7610 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		49BB19BD251944EE00EA7610 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
+		5321187275C3EBB7335F86D0 /* Pods_AppMetflix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppMetflix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74C85EF82EF702340A819259 /* Pods-AppMetflix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppMetflix.debug.xcconfig"; path = "Target Support Files/Pods-AppMetflix/Pods-AppMetflix.debug.xcconfig"; sourceTree = "<group>"; };
+		B9B8542E17B3D3C1CC15CD65 /* Pods-AppMetflix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppMetflix.release.xcconfig"; path = "Target Support Files/Pods-AppMetflix/Pods-AppMetflix.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +65,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47A6EB9F3A7FFC3069552680 /* Pods_AppMetflix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AFD7A4623DAF14403818397 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				74C85EF82EF702340A819259 /* Pods-AppMetflix.debug.xcconfig */,
+				B9B8542E17B3D3C1CC15CD65 /* Pods-AppMetflix.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		49327CD625194D9800BDA3DD /* CategoryMovieCell */ = {
+			isa = PBXGroup;
+			children = (
+				494F6EDE25198714006DEB17 /* MovieCell */,
+				49327CD725197E3000BDA3DD /* MovieCategoryTableViewCell.swift */,
+			);
+			path = CategoryMovieCell;
+			sourceTree = "<group>";
+		};
+		494F6EDE25198714006DEB17 /* MovieCell */ = {
+			isa = PBXGroup;
+			children = (
+				494F6EDF25198728006DEB17 /* CollectionViewCell.swift */,
+			);
+			path = MovieCell;
+			sourceTree = "<group>";
+		};
 		49BB197A25190DB300EA7610 = {
 			isa = PBXGroup;
 			children = (
 				49BB198525190DB300EA7610 /* AppMetflix */,
 				49BB198425190DB300EA7610 /* Products */,
+				1AFD7A4623DAF14403818397 /* Pods */,
+				C5C2DAB816C23DF4D5A6756F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +119,77 @@
 		49BB198525190DB300EA7610 /* AppMetflix */ = {
 			isa = PBXGroup;
 			children = (
+				49BB19B6251921FC00EA7610 /* Classes */,
+				49BB19AD25191BFE00EA7610 /* Base */,
+				49BB19A12519150300EA7610 /* Entities */,
+				49BB199A251910E000EA7610 /* Application */,
+				49BB199D2519136700EA7610 /* Home */,
+				49BB198C25190DB300EA7610 /* Main.storyboard */,
+			);
+			path = AppMetflix;
+			sourceTree = "<group>";
+		};
+		49BB199A251910E000EA7610 /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				49BB198625190DB300EA7610 /* AppDelegate.swift */,
 				49BB198825190DB300EA7610 /* SceneDelegate.swift */,
-				49BB198A25190DB300EA7610 /* ViewController.swift */,
-				49BB198C25190DB300EA7610 /* Main.storyboard */,
 				49BB198F25190DB700EA7610 /* Assets.xcassets */,
 				49BB199125190DB700EA7610 /* LaunchScreen.storyboard */,
 				49BB199425190DB700EA7610 /* Info.plist */,
 			);
-			path = AppMetflix;
+			path = Application;
+			sourceTree = "<group>";
+		};
+		49BB199D2519136700EA7610 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				49327CD625194D9800BDA3DD /* CategoryMovieCell */,
+				49BB19A925191B1D00EA7610 /* HomeManager.swift */,
+				49BB19A725191B1D00EA7610 /* HomePresenter.swift */,
+				49BB19A825191B1D00EA7610 /* HomeRouter.swift */,
+				49BB199B2519130400EA7610 /* HomeTableViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		49BB19A12519150300EA7610 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				49BB19A32519151A00EA7610 /* Category.swift */,
+				49BB19A52519166900EA7610 /* Movie.swift */,
+				49BB19BD251944EE00EA7610 /* ApiResponse.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		49BB19AD25191BFE00EA7610 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				49BB19B125191C1500EA7610 /* BaseManager.swift */,
+				49BB19AE25191C1500EA7610 /* BasePresenter.swift */,
+				49BB19AF25191C1500EA7610 /* BaseRouter.swift */,
+				49BB19B025191C1500EA7610 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		49BB19B6251921FC00EA7610 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				49BB19B72519220C00EA7610 /* Extensions.swift */,
+				49BB19B92519225900EA7610 /* Enumns.swift */,
+				49BB19BB2519431200EA7610 /* Constants.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		C5C2DAB816C23DF4D5A6756F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5321187275C3EBB7335F86D0 /* Pods_AppMetflix.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +199,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49BB199725190DB700EA7610 /* Build configuration list for PBXNativeTarget "AppMetflix" */;
 			buildPhases = (
+				EFCA4C06EF283B6DC8DCCAFF /* [CP] Check Pods Manifest.lock */,
 				49BB197F25190DB300EA7610 /* Sources */,
 				49BB198025190DB300EA7610 /* Frameworks */,
 				49BB198125190DB300EA7610 /* Resources */,
+				E90907AAD7E1241E1CDDE268 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +260,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E90907AAD7E1241E1CDDE268 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppMetflix/Pods-AppMetflix-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppMetflix/Pods-AppMetflix-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppMetflix/Pods-AppMetflix-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFCA4C06EF283B6DC8DCCAFF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppMetflix-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		49BB197F25190DB300EA7610 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49BB198B25190DB300EA7610 /* ViewController.swift in Sources */,
+				49327CD825197E3000BDA3DD /* MovieCategoryTableViewCell.swift in Sources */,
+				49BB19AC25191B1D00EA7610 /* HomeManager.swift in Sources */,
+				494F6EE025198728006DEB17 /* CollectionViewCell.swift in Sources */,
+				49BB19B225191C1500EA7610 /* BasePresenter.swift in Sources */,
+				49BB19B425191C1500EA7610 /* BaseViewController.swift in Sources */,
+				49BB199C2519130400EA7610 /* HomeTableViewController.swift in Sources */,
 				49BB198725190DB300EA7610 /* AppDelegate.swift in Sources */,
+				49BB19BE251944EE00EA7610 /* ApiResponse.swift in Sources */,
+				49BB19BC2519431200EA7610 /* Constants.swift in Sources */,
+				49BB19AB25191B1D00EA7610 /* HomeRouter.swift in Sources */,
+				49BB19B525191C1500EA7610 /* BaseManager.swift in Sources */,
+				49BB19BA2519225900EA7610 /* Enumns.swift in Sources */,
 				49BB198925190DB300EA7610 /* SceneDelegate.swift in Sources */,
+				49BB19B82519220C00EA7610 /* Extensions.swift in Sources */,
+				49BB19AA25191B1D00EA7610 /* HomePresenter.swift in Sources */,
+				49BB19B325191C1500EA7610 /* BaseRouter.swift in Sources */,
+				49BB19A42519151A00EA7610 /* Category.swift in Sources */,
+				49BB19A62519166900EA7610 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,11 +466,12 @@
 		};
 		49BB199825190DB700EA7610 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74C85EF82EF702340A819259 /* Pods-AppMetflix.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6PN6V35AZY;
-				INFOPLIST_FILE = AppMetflix/Info.plist;
+				INFOPLIST_FILE = AppMetflix/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,11 +485,12 @@
 		};
 		49BB199925190DB700EA7610 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9B8542E17B3D3C1CC15CD65 /* Pods-AppMetflix.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6PN6V35AZY;
-				INFOPLIST_FILE = AppMetflix/Info.plist;
+				INFOPLIST_FILE = AppMetflix/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

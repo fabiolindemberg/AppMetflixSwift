@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+struct Movie : Codable {
+    let title: String!
+    let coverURL: String!
+    let text: String!
+    let year: String!
+    let temp: String!
+    let casting: String!
+    let creators: String!
+    let time: String!
+    let age: String!
+    let progress: String!
+}

@@ -8,7 +8,10 @@
 
 import UIKit
 
-class MovieCategoryTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
+class MovieCategoryCell: UITableViewCell,
+                         UICollectionViewDelegate,
+                         UICollectionViewDataSource,
+                         UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var cvCategory: UICollectionView!
     var category: Category!
@@ -37,10 +40,21 @@ class MovieCategoryTableViewCell: UITableViewCell, UICollectionViewDelegate, UIC
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCell", for: indexPath) as! CollectionViewCell
-        cell.loadCell(with: category.movies![indexPath.row])
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCell", for: indexPath) as! MovieCell
+        cell.presenter = MovieCellPresenter(movie: self.category.movies![indexPath.row])
+        cell.loadCell()
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 100, height: 150)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCell", for: indexPath) as! MovieCell
+        cell.presenter = MovieCellPresenter(movie: self.category.movies![indexPath.row])
+        cell.showMovie()
+    }
 
 }

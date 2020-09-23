@@ -10,5 +10,5 @@ import Foundation
 
 struct Category: Codable {
     let name: String!
-    let movies: [Movie]?
+    var movies: [Movie]?
 }

@@ -8,9 +8,13 @@
 
 import UIKit
 
-class HomeTableViewController: UITableViewController, HomePresenterDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
+class HomeTableViewController: UITableViewController,
+                               HomePresenterDelegate,
+                               UICollectionViewDelegate,
+                               UICollectionViewDataSource{
 
     @IBOutlet var imgCover: UIImageView!
+    @IBOutlet weak var cvMoviePreview: UICollectionView!
     var presenter: HomePresenter!
     
     override func viewDidLoad() {
@@ -26,15 +30,22 @@ class HomeTableViewController: UITableViewController, HomePresenterDelegate, UIC
     }
 
     // MARK: - Table view data source
-
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return presenter.categories.count
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return presenter.categories[section].name
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return presenter.categories.count
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCategoryCell") as! MovieCategoryTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCategoryCell") as! MovieCategoryCell
         cell.loadCell(with: presenter.categories[indexPath.section])
         return cell
     }
@@ -42,11 +53,18 @@ class HomeTableViewController: UITableViewController, HomePresenterDelegate, UIC
     // MARK: - UICollectionViewDelegate, UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return self.presenter.movies.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return collectionView.dequeueReusableCell(withReuseIdentifier: "PreviewCell", for: indexPath)
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PreviewCell", for: indexPath) as! PreviewCell
+        cell.loadCell(with: self.presenter.movies[indexPath.row])
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.presenter.show(movie: self.presenter.movies[indexPath.row])
     }
 
     // MARK: - PresenterDelegate
@@ -55,6 +73,7 @@ class HomeTableViewController: UITableViewController, HomePresenterDelegate, UIC
          
         DispatchQueue.main.async {
             self.tableView.reloadData()
+            self.cvMoviePreview.reloadData()
         }
     }
 }

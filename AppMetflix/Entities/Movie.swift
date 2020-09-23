@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct Movie : Codable {
+struct Movie : Codable, Equatable {
+    let category: String!
     let title: String!
     let coverURL: String!
     let text: String!
@@ -19,4 +20,6 @@ struct Movie : Codable {
     let time: String!
     let age: String!
     let progress: String!
+    let relevant: String!
+    
 }

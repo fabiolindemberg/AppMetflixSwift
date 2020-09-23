@@ -23,6 +23,7 @@ protocol HomePresenterDelegate: BasePresenterDelegate {
 class HomePresenter: BasePresenter {
     
     var categories: [Category] = []
+    var movies: [Movie] = []
     var delegate: HomePresenterDelegate?
     
     init (delegate: HomePresenterDelegate?) {
@@ -32,14 +33,43 @@ class HomePresenter: BasePresenter {
     }
     
     func loadData() {
-        HomeManager().loadData { [weak self] (movies) in
+        HomeManager().loadData { (movies) in
             
             if let _ = movies {
+
+                self.movies = movies ?? []
                 
-                self?.categories.append(Category(name: "Minha lista", movies: movies))
+                var category :Category? = nil
+                
+                let moviesCategorized = movies!.sorted { (movie1, movie2) -> Bool in
+                    return movie1.category > movie2.category
+                }
+                
+                moviesCategorized.forEach { (movie) in
+                    
+                    if category == nil {
+                        category = Category(name: movie.category, movies: [])
+                    }
+                    
+                    if category!.name != movie.category || moviesCategorized.last == movie {
+                        
+                        if moviesCategorized.last == movie {
+                            category?.movies?.append(movie)
+                        }
+                        
+                        self.categories.append(category!)
+                        category = Category(name: movie.category, movies: [movie])
+                    } else {
+                        category?.movies?.append(movie)
+                    }
+                }
             }
             
-            self?.delegate?.loadedData()
+            self.delegate?.loadedData()
         }
+    }
+    
+    func show(movie: Movie) {
+        HomeRouter().show(movie: movie, recomendations: movies)
     }
 }

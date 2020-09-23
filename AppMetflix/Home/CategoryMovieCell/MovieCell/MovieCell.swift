@@ -9,13 +9,19 @@
 import UIKit
 import SDWebImage
 
-class CollectionViewCell: UICollectionViewCell {
+class MovieCell: UICollectionViewCell {
     
     @IBOutlet weak var imgCover: UIImageView!
+    var presenter: MovieCellPresenter!
     
-    func loadCell(with movie: Movie) {
-        if let url = URL(string:movie.coverURL!) {
+    func loadCell() {
+        
+        if let url = URL(string:presenter.movie.coverURL!) {
             imgCover.sd_setImage(with: url, completed: nil)
         }
+    }
+    
+    func showMovie() {
+        presenter.showMovie()
     }
 }
